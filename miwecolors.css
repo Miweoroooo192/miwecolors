@@ -1,0 +1,110 @@
+/* MIWECOLORS ALPHA.1*/
+
+:root{
+    /* Varibles*/
+    --blue: #0066ff;
+    --white: #fff;
+    --info: #0066ff;
+    --border: #0000e6;
+    --yellow: #ff6;
+    --whitesmoke: #f1f1f1;
+    --black: #000;
+    --gray: #a8a8a8;
+    /* Main Font */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/*Animations */
+@keyframes hovering {
+    from {background-color: var(--whitesmoke);}
+    to {background-color: var(--gray);}
+}
+@keyframes unhovering {
+    from {background-color: var(--gray);}
+    to {background-color: var(--whitesmoke);}
+}
+.quad-sized{
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+}
+.bg-blue{
+    /* This might now work well with some elements*/
+    background-color: var(--blue);
+}
+.text-white{
+    color: var(--white);
+}
+.m-br-blue {
+    border: 5px solid var(--border) ;
+}
+.s-br-blue {
+    border: 2px solid var(--border) ;
+}
+.rect-sized{
+    width: 300px;
+    height: 20px;
+    padding: 10px;
+}
+div {
+    padding: 10px;
+}
+.highlighted {
+    background-color: var(--yellow);
+}
+ul.m-vertical-navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    /*background-color: var(--whitesmoke);*/
+}
+li.m-vertical-navbar a.m-vertical-navbar{
+    display: block;
+    /*color: #000;*/
+    padding: 8px 16px;
+    text-decoration: none;
+    
+}
+li.m-vertical-navbar:hover:not(.bg-blue) a.m-vertical-navbar:hover:not(.bg-blue){
+    animation-name: hovering;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+li.m-vertical-navbar:not(.bg-blue) a.m-vertical-navbar:not(.bg-blue){
+    animation-name: unhovering;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+ul.m-hon-navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    /*background-color: var(--whitesmoke);*/
+}
+li.m-hon-navbar a.m-hon-navbar{
+    display: inline;
+    float: left;
+    /*color: #000;*/
+    padding: 8px 16px;
+    text-decoration: none;
+    
+}
+li.m-hon-navbar:not(.bg-blue) a.m-hon-navbar:not(.bg-blue){
+    animation-name: unhovering;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+li.m-hon-navbar:hover:not(.bg-blue) a.m-hon-navbar:hover:not(.bg-blue){
+    animation-name: hovering;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.navbar {
+    background-color: var(--whitesmoke);
+    color: #000;
+}
+.text-black {
+    color: #000;
+}
